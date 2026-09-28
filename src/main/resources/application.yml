@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: task-tracker
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/task_tracker}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+jwt:
+  # Base64, минимум 64 байта для HS512. В проде задавать через переменную JWT_SECRET
+  secret: ${JWT_SECRET:exL0s7+diIrAi3MLVASmsLaTXtCXsBsdlQeXvT65RyO2a+yS7cGUX7qYbL+jnlnqY6jAFV7iaju4G9r6sjEOUg==}
+  expiration-ms: 86400000
