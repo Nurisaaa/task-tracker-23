@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "users") // "user" - зарезервированное слово в PostgreSQL
@@ -30,6 +31,8 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private Role role;
+    @ManyToMany
+    private List<Project> projects;
 
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
