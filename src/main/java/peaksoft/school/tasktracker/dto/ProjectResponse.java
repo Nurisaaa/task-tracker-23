@@ -6,21 +6,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProjectResponse {
     private Long id;
-    private String name;
+    private String title;
     private String description;
-    private int totalTasks;
-    private int doneTasks;
+    private Long totalTasks;
+    private Long doneTasks;
     private List<UserProfileResponse> userProfileResponses;
 
-    public ProjectResponse(Long id, String name, String description, int totalTasks, int doneTasks) {
+    public ProjectResponse(Long id, String title, String description, Long totalTasks, Long doneTasks) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.description = description;
         this.totalTasks = totalTasks;
         this.doneTasks = doneTasks;

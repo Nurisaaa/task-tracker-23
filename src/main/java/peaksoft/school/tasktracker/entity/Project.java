@@ -25,4 +25,11 @@ public class Project {
     private LocalDate creatAt;
     @ManyToMany
     private List<User> member;
+
+    public  Project(User ownerId, String title, String description, LocalDate creatAt) {
+        this.ownerId = ownerId;
+        this.title = title;
+        this.description = description;
+        this.creatAt = creatAt;
+    }
 }

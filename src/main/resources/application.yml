@@ -5,9 +5,9 @@ spring:
   application:
     name: task-tracker
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/task_tracker}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/postgres}
     username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:postgres}
+    password: ${DB_PASSWORD:0303}
   jpa:
     hibernate:
       ddl-auto: update
